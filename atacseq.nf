@@ -9,6 +9,7 @@ include { BOWTIE2_ALIGN } from './modules/bowtie2_align.nf'
 include { BAM_PROPER_FILTER } from './modules/bam_proper_filter.nf'
 include { PICARD_MARKDUPLICATES } from './modules/picard_markduplicates.nf'
 include { BAM_MAPQ20_FILTER } from './modules/bam_mapq20_filter.nf'
+include { BAM_STDCHR_BLACKLIST } from './modules/bam_stdchr_blacklist.nf'
 
 include { SAMTOOLS_INDEX } from './modules/samtools_index.nf'
 include { SAMTOOLS_STATS } from './modules/samtools_stats.nf'
@@ -28,10 +29,14 @@ include { MULTIQC } from './modules/multiqc.nf'
  */
 
 // Primary input
-params.input_csv = "data/samplesheet_test.csv"
-params.fasta = "test-datasets/reference/genome.fa"
-params.gtf = "test-datasets/reference/genes.gtf"
+params.input_csv = "data/samplesheet.csv"
+params.blacklist = "data/hg38-blacklist.bed"
+// params.fasta = "test-datasets/reference/genome.fa"
+// params.gtf = "test-datasets/reference/genes.gtf"
 params.report_id = "atacseq"
+
+params.fasta = "data/GRCh38.primary_assembly.genome_v48.fa"
+params.gtf = "data/gencode.v48.primary_assembly.annotation.gtf"
 
 log.info """\
 ==================================================================================================
@@ -63,6 +68,7 @@ workflow {
         .splitCsv(header:true)
         .map { row ->
             def meta = [
+                donor_id : row.donor_id,
                 sample_id: row.sample_id
             ]
             tuple(meta, file(row.fastq_1), file(row.fastq_2))
@@ -86,9 +92,11 @@ workflow {
     
     BAM_MAPQ20_FILTER(PICARD_MARKDUPLICATES.out.bam)
 
+    BAM_STDCHR_BLACKLIST(BAM_MAPQ20_FILTER.out.bam, file(params.fasta), file(params.blacklist))
+
     // BAM INDEXING & QC STATISTICS
 
-    SAMTOOLS_INDEX(BAM_MAPQ20_FILTER.out.bam)
+    SAMTOOLS_INDEX(BAM_STDCHR_BLACKLIST.out.bam)
 
     SAMTOOLS_STATS(SAMTOOLS_INDEX.out.bam_bai, file(params.fasta))
 
@@ -98,13 +106,16 @@ workflow {
 
     // FRAGMENT LENGTH SELECTION
 
-    FRAG_SHORTER_100(SAMTOOLS_INDEX.out.bam_bai)
-
-    FRAG_LONGER_100(SAMTOOLS_INDEX.out.bam_bai)
+    FRAG_SHORTER_100(SAMTOOLS_INDEX.out.bam_bai)    // nucleosome-free regions
 
     BAM_TO_BIGWIG_SHORT(FRAG_SHORTER_100.out.bam)
 
-    BAM_TO_BIGWIG_LONG(FRAG_LONGER_100.out.bam)
+    FRAG_LONGER_100(SAMTOOLS_INDEX.out.bam_bai)     // mono-/di-nucleosome fragments
+
+    BAM_TO_BIGWIG_LONG(FRAG_LONGER_100.out.bam)   
+
+    // DOWNSTREAM ANALYSIS
+
 
     // SUMMARY REPORT GENERATION
 

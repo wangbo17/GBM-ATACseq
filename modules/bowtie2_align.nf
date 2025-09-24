@@ -16,23 +16,23 @@ process BOWTIE2_ALIGN {
 
     script:
     def sample_id = meta.sample_id
-    def group = meta.group
+    def donor = meta.donor_id
 
     """
     prefix_name=\$(basename \$(ls ${bt2_index}/*.1.bt2) | sed -E 's/\\.1\\.bt2\$//')
     prefix_path=${bt2_index}/\$prefix_name
 
-    bowtie2 \\
-        --end-to-end --very-sensitive \\
-        --no-mixed --no-discordant \\
-        --phred33 -I 10 -X 2000 \\
-        -x \$prefix_path \\
-        -1 ${read1} -2 ${read2} \\
-        --threads ${task.cpus} \\
-        2> ${sample_id}.bowtie2.log \\
+bowtie2 \\
+    --end-to-end --sensitive \\
+    --no-mixed --no-discordant --dovetail \\
+    --phred33 -X 2000 --no-unal \\
+    -x \$prefix_path \\
+    -1 ${read1} -2 ${read2} \\
+    --threads ${task.cpus} \\
+    2> ${sample_id}.bowtie2.log \\
         | samtools sort -@ ${task.cpus} -o - - \\
         | samtools addreplacerg \\
-            -r ID:${sample_id} -r SM:${group} \\
+            -r ID:${sample_id} -r SM:${donor} \\
             -o ${sample_id}.rg.bam -
     """
 }

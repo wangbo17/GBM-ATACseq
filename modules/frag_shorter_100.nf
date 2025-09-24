@@ -10,7 +10,7 @@ process FRAG_SHORTER_100 {
     tuple val(meta), path(bam), path(bai)
 
     output:
-    tuple val(meta), path("*.Shorter100bp.bam"), path("*.Shorter100bp.bam.bai"), emit: bam
+    tuple val(meta), path("*.Shorter100bp.bam"), path("*.Shorter100bp.bam.bai"), emit: bam_bai
 
     script:
     """

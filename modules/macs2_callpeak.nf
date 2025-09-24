@@ -6,7 +6,7 @@ process MACS2_CALLPEAK {
     publishDir "results/macs2", mode: 'copy'
 
     input:
-    tuple val(meta), path(exp_bam), path(exp_bai)
+    tuple val(meta), path(bam), path(bai)
 
     output:
     tuple val(meta), path("*.narrowPeak"), emit: peak
@@ -14,10 +14,11 @@ process MACS2_CALLPEAK {
 
     script:
     def sample_id = meta.sample_id
+    def t_list    = exp_bams.join(' ')
 
     """
     macs2 callpeak \\
-        --treatment ${exp_bam} \\
+        --treatment ${t_list} \\
         --format BAMPE \\
         --gsize hs \\
         --keep-dup all \\

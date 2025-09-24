@@ -1,0 +1,390 @@
+
+ N E X T F L O W   ~  version 24.10.6
+
+Launching `atacseq.nf` [mad_babbage] DSL2 - revision: d1cccb9f0c
+
+==================================================================================================
+       ____ ____  __  __      _  _____  _    ____     ____             
+      / ___| __ )|  \/  |    / \|_   _|/ \  / ___|   / ___|  ___  __ _ 
+     | |  _|  _ \| |\/| |   / _ \ | | / _ \| |   ____\___ \ / _ \/ _` |
+     | |_| | |_) | |  | |  / ___ \| |/ ___ \ |__|_____|__) |  __/ (_| |
+      \____|____/|_|  |_| /_/   \_\_/_/   \_\____|   |____/ \___|\__, |
+                                                                    |_|
+                                                                                     
+==================================================================================================
+
+  ▸ Key Parameters:
+
+    ▹ Executed By       : gdmn373
+    ▹ Run Date          : 2025-09-23 15:37 UTC
+
+                                                                Author: Bo Wang | Version: Beta
+==================================================================================================
+
+[-        ] FASTQC      -
+[-        ] TRIM_GALORE -
+
+[-        ] FASTQC                -
+[-        ] TRIM_GALORE           -
+[-        ] BOWTIE2_BUILD         -
+[-        ] BOWTIE2_ALIGN         -
+[-        ] BAM_PROPER_FILTER     -
+[-        ] PICARD_MARKDUPLICATES -
+[-        ] BAM_MAPQ20_FILTER     -
+[-        ] BAM_STDCHR_BLACKLIST  -
+[-        ] SAMTOOLS_INDEX        -
+[-        ] SAMTOOLS_STATS        -
+[-        ] SAMTOOLS_IDXSTATS     -
+[-        ] SAMTOOLS_FLAGSTAT     -
+[-        ] FRAG_SHORTER_100      -
+[-        ] BAM_TO_BIGWIG_SHORT   -
+[-        ] FRAG_LONGER_100       -
+[-        ] BAM_TO_BIGWIG_LONG    -
+[-        ] MULTIQC               -
+
+[56/db61de] FASTQC (1)            | 1 of 1, cached: 1
+[1f/419695] TRIM_GALORE (1)       | 1 of 1, cached: 1
+[60/e2df05] BOWTIE2_BUILD         | 1 of 1, cached: 1
+[-        ] BOWTIE2_ALIGN         -
+[-        ] BAM_PROPER_FILTER     -
+[-        ] PICARD_MARKDUPLICATES -
+[-        ] BAM_MAPQ20_FILTER     -
+[-        ] BAM_STDCHR_BLACKLIST  -
+[-        ] SAMTOOLS_INDEX        -
+[-        ] SAMTOOLS_STATS        -
+[-        ] SAMTOOLS_IDXSTATS     -
+[-        ] SAMTOOLS_FLAGSTAT     -
+[-        ] FRAG_SHORTER_100      -
+[-        ] BAM_TO_BIGWIG_SHORT   -
+[-        ] FRAG_LONGER_100       -
+[-        ] BAM_TO_BIGWIG_LONG    -
+[-        ] MULTIQC               -
+
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[-        ] SAMTOOLS_INDEX            -
+[-        ] SAMTOOLS_STATS            -
+[-        ] SAMTOOLS_IDXSTATS         -
+[-        ] SAMTOOLS_FLAGSTAT         -
+[-        ] FRAG_SHORTER_100          -
+[-        ] BAM_TO_BIGWIG_SHORT       -
+[-        ] FRAG_LONGER_100           -
+[-        ] BAM_TO_BIGWIG_LONG        -
+[-        ] MULTIQC                   -
+
+executor >  slurm (1)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 0 of 1
+[-        ] SAMTOOLS_STATS            -
+[-        ] SAMTOOLS_IDXSTATS         -
+[-        ] SAMTOOLS_FLAGSTAT         -
+[-        ] FRAG_SHORTER_100          -
+[-        ] BAM_TO_BIGWIG_SHORT       -
+[-        ] FRAG_LONGER_100           -
+[-        ] BAM_TO_BIGWIG_LONG        -
+[-        ] MULTIQC                   -
+
+executor >  slurm (1)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 0 of 1
+[-        ] SAMTOOLS_STATS            -
+[-        ] SAMTOOLS_IDXSTATS         -
+[-        ] SAMTOOLS_FLAGSTAT         -
+[-        ] FRAG_SHORTER_100          -
+[-        ] BAM_TO_BIGWIG_SHORT       -
+[-        ] FRAG_LONGER_100           -
+[-        ] BAM_TO_BIGWIG_LONG        -
+[-        ] MULTIQC                   -
+
+executor >  slurm (4)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 0 of 1
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 0 of 1
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 0 of 1
+[-        ] FRAG_SHORTER_100          | 0 of 1
+[-        ] BAM_TO_BIGWIG_SHORT       -
+[-        ] FRAG_LONGER_100           | 0 of 1
+[-        ] BAM_TO_BIGWIG_LONG        -
+[-        ] MULTIQC                   -
+
+executor >  slurm (6)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 0 of 1
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 0 of 1
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 0 of 1
+[86/662fae] FRAG_SHORTER_100 (1)      | 0 of 1
+[-        ] BAM_TO_BIGWIG_SHORT       -
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 0 of 1
+[-        ] BAM_TO_BIGWIG_LONG        -
+[-        ] MULTIQC                   -
+
+executor >  slurm (6)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 0 of 1
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 0 of 1
+[86/662fae] FRAG_SHORTER_100 (1)      | 0 of 1
+[-        ] BAM_TO_BIGWIG_SHORT       -
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 0 of 1
+[-        ] BAM_TO_BIGWIG_LONG        -
+[-        ] MULTIQC                   -
+
+executor >  slurm (6)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 0 of 1
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 0 of 1
+[-        ] BAM_TO_BIGWIG_SHORT       -
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 0 of 1
+[-        ] BAM_TO_BIGWIG_LONG        -
+[-        ] MULTIQC                   -
+
+executor >  slurm (6)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 0 of 1
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[-        ] BAM_TO_BIGWIG_SHORT       | 0 of 1
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 0 of 1
+[-        ] BAM_TO_BIGWIG_LONG        -
+[-        ] MULTIQC                   -
+
+executor >  slurm (8)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 0 of 1
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 0 of 1
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 0 of 1
+[-        ] MULTIQC                   -
+
+executor >  slurm (8)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 0 of 1
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 0 of 1
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 0 of 1
+[-        ] MULTIQC                   -
+
+executor >  slurm (9)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 1 of 1 ✔
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 0 of 1
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 0 of 1
+[32/2bc76a] MULTIQC                   | 0 of 1
+
+executor >  slurm (9)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 1 of 1 ✔
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 0 of 1
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 0 of 1
+[32/2bc76a] MULTIQC                   | 0 of 1
+
+executor >  slurm (9)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 1 of 1 ✔
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 0 of 1
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 0 of 1
+[32/2bc76a] MULTIQC                   | 0 of 1 ✔
+
+executor >  slurm (9)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 1 of 1 ✔
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 0 of 1
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 0 of 1
+[32/2bc76a] MULTIQC                   | 1 of 1 ✔
+
+executor >  slurm (9)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 1 of 1 ✔
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 1 of 1 ✔
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 0 of 1
+[32/2bc76a] MULTIQC                   | 1 of 1 ✔
+
+executor >  slurm (9)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 1 of 1 ✔
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 1 of 1 ✔
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 1 of 1 ✔
+[32/2bc76a] MULTIQC                   | 1 of 1 ✔
+
+executor >  slurm (9)
+[56/db61de] FASTQC (1)                | 1 of 1, cached: 1 ✔
+[1f/419695] TRIM_GALORE (1)           | 1 of 1, cached: 1 ✔
+[60/e2df05] BOWTIE2_BUILD             | 1 of 1, cached: 1 ✔
+[b6/1112b4] BOWTIE2_ALIGN (1)         | 1 of 1, cached: 1 ✔
+[ef/d80886] BAM_PROPER_FILTER (1)     | 1 of 1, cached: 1 ✔
+[35/84b837] PICARD_MARKDUPLICATES (1) | 1 of 1, cached: 1 ✔
+[fd/7f6c13] BAM_MAPQ20_FILTER (1)     | 1 of 1, cached: 1 ✔
+[3e/054f5c] BAM_STDCHR_BLACKLIST (1)  | 1 of 1, cached: 1 ✔
+[79/613718] SAMTOOLS_INDEX (1)        | 1 of 1 ✔
+[be/b20e6c] SAMTOOLS_STATS (1)        | 1 of 1 ✔
+[82/e3157b] SAMTOOLS_IDXSTATS (1)     | 1 of 1 ✔
+[8e/6476d3] SAMTOOLS_FLAGSTAT (1)     | 1 of 1 ✔
+[86/662fae] FRAG_SHORTER_100 (1)      | 1 of 1 ✔
+[5f/19c243] BAM_TO_BIGWIG_SHORT (1)   | 1 of 1 ✔
+[c3/3ae28d] FRAG_LONGER_100 (1)       | 1 of 1 ✔
+[27/516bc3] BAM_TO_BIGWIG_LONG (1)    | 1 of 1 ✔
+[32/2bc76a] MULTIQC                   | 1 of 1 ✔
+Completed at: 23-Sep-2025 15:43:50
+Duration    : 6m 47s
+CPU hours   : 8.8 (85.8% cached)
+Succeeded   : 9
+Cached      : 8
+
+
